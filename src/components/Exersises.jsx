@@ -6,7 +6,7 @@ import { headers, fetchData } from "../utils/fetchData";
 import ExesciseCard from "./ExerciseCard";
 
 const Exersises = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
-  const exercisePerPage = 9             ;
+  const exercisePerPage = 12             ;
   const [currentPage, setCurrentPage] = useState(1);
 
   const paginate = (e, value) => {
@@ -53,7 +53,7 @@ const Exersises = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
         sx={{ lg: "110px", xs: "50px" }}
         flexWrap="wrap"
         justifyContent="center"
-        gap="30px"
+        gap="20px"
       >
         {currentExercisesToShow.map((exercise, index) => (
           <ExesciseCard key={index} exercise={exercise} />
